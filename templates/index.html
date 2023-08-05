@@ -1,0 +1,43 @@
+    {% include 'header.html' %}
+    <div class="new"><a href="{{url_for('create')}}">
+        <p>New</p>
+        <img src="{{ url_for('static', filename='/resources/mas.gif') }}" alt="mas">
+    </a></div>
+    
+
+    <table>
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Photo</th>
+                <th>Name</th>
+                <th>Mail</th>
+                <th>Edit | Remove</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for employee in employees %}
+            <tr>
+                <td>{{employee[0] }}</td>
+                <td>
+                    <img class="img" src="uploads/{{employee[3]}}" alt="photo"></td>
+                <td>{{employee[1] }}</td>
+                <td>{{employee[2] }}</td>
+                <td> <a href="/edit/{{employee[0]}}"> 
+                    <img class="edit" src="{{ url_for('static', filename='/resources/editar.png') }}" 
+                    alt="editar"></a> | 
+                    <a 
+                    onclick="return confirm('Confirm you want to delete the employee?')" 
+                    href="/destroy/{{employee[0]}}"> 
+                    <img class="delete" src="{{ url_for('static', filename='/resources/borrar.png') }}" 
+                    alt="borrar">
+                </a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    
+
+    {% include 'footer.html' %}

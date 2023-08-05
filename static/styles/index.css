@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&family=Rubik:wght@400;500&display=swap');
+
+
+body {
+    margin: 0;
+    padding: 0;
+
+    
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    background-color: #cbe2ac;
+    justify-content: space-between;
+    font-family: 'Rubik', sans-serif;
+}
+
+nav p {
+    margin-left: 1%;
+    font-weight: 500;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.new {
+    display: flex;
+    align-self: flex-end;
+    width: 10%;
+}
+
+.new p {
+    font-family: 'Rubik', sans-serif;
+}
+
+.new a {
+    text-decoration: none;
+    display: flex;
+}
+
+.new a:hover {
+    text-decoration: underline;
+}
+
+.new img {
+    align-self: center;
+    width: 23%;
+    margin-left: 5%;
+}
+
+table {
+    width: 90%;
+    align-self: center;
+    border: 10px solid #cbe2ac;
+    /* border-radius: 26px ;  */
+    border-spacing: 0;
+    font-family: 'Nunito', sans-serif;
+    
+}
+
+table thead {
+    background-color: #cbe2ac;
+    height: 50px;
+}
+
+table tbody {
+    background-color: #e5f0d5;
+    
+}
+table tbody tr td{
+    vertical-align: middle;
+    text-align-last: center;
+    border-bottom: 1px solid white;
+
+}
+table tbody tr{
+    transition: height 0.3s ease, box-shadow 0.3s ease;
+}
+table tbody tr:hover{
+    box-shadow: 0px 5px 10px 10px rgba(0, 0, 0, 0.1);
+
+}
+table tbody tr td img{
+    vertical-align: middle;
+    width: 70px;
+    max-height: 50px;
+    border: 2px solid #959990;
+}
+table tbody tr td a{
+    text-decoration: none;
+    vertical-align: middle;
+}
+table tbody tr td a:hover{
+    text-decoration: underline;
+}
+
+.delete{
+    width: 4%;
+    border: 0;
+    margin-right: 2px;
+    margin-left: 2px;
+    vertical-align: middle;
+    
+}
+
+.edit{
+    width: 5%;
+    border: 0;
+    margin-left: 2px;
+    margin-right: 2px;
+    vertical-align: middle;
+}

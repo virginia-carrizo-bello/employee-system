@@ -1,0 +1,27 @@
+{% include 'header.html' %}
+FORM TO EDIT
+{% for employee in employees %}
+<ul>
+    <li>
+        <a href="{{ url_for('index') }}">Ver lista empleados</a>
+    </li>
+</ul>
+<form method="post" action="/update" enctype="multipart/form-data">
+    <input type="hidden" value="{{ employee[0]}}" name="txtID" id="txtID" ">
+    <br>
+    <label for=" txtName">Name:</label>
+    <input type="text" name="txtName" id="txtName" value="{{ employee[1] }}">
+    <br>
+    <label for="txtMail">Mail:</label>
+    <input type="email" name="txtMail" id="txtMail" value="{{ employee[2] }}">
+    <br>
+    <label for="txtPhoto">Photo:</label>
+    <img class="img-thumbnail" width="100" src="{{url_for('uploads',namePhoto=employee[3])}}" alt="photo"></td>
+    <br>
+    <input type="file" name="txtPhoto" id="txtPhoto">
+    <br>
+    <input type="submit" value="Edit">
+    <a href="{{url_for("index")}}">Back</a>
+</form>
+{% endfor %}
+{% include 'footer.html' %}

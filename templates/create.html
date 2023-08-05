@@ -1,0 +1,32 @@
+{% include 'header.html' %}
+{% with messages=get_flashed_messages() %}
+{% if messages %}
+    {% for message in messages %}
+        {{message}}
+    {% endfor %}
+{% endif %}
+{% endwith %}
+<ul>
+    <li>
+        <a href="{{ url_for('index') }}">Ver lista empleados</a>
+    </li>
+</ul>
+<form method="post" action="/store" enctype="multipart/form-data">
+
+    Employee registration
+
+    <label for="txtName">Name:</label>
+    <input type="text" name="txtName" id="txtName">
+    <br>
+    <label for="txtMail">Mail:</label>
+    <input type="email" name="txtMail" id="txtMail">
+    <br>
+    <label for="txtPhoto">Photo:</label>
+    <input type="file" name="txtPhoto" id="txtPhoto">
+    <br>
+    <input type="submit" value="Agregar">
+    <a href="{{url_for("index")}}">Back</a>
+</form>
+
+
+{% include 'footer.html' %}

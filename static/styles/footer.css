@@ -1,0 +1,25 @@
+
+footer {
+    padding: 0;   
+    margin: 0;
+    font-family: 'Rubik', sans-serif; 
+    background-color: #cbe2ac;
+    position: bottom;
+    bottom: 0;
+    width: 100%;
+    height: 13%;
+    top: 50px; 
+
+}
+
+.redes{
+    width: 2%;
+    padding: 8px;
+}
+
+.social-media{
+    padding-top: 2%;
+    display: flex;
+    justify-content: center;
+
+}
