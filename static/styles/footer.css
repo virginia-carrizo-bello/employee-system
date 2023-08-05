@@ -3,23 +3,25 @@ footer {
     padding: 0;   
     margin: 0;
     font-family: 'Rubik', sans-serif; 
-    background-color: #cbe2ac;
-    position: bottom;
-    bottom: 0;
     width: 100%;
-    height: 13%;
-    top: 50px; 
-
+    height: 100px;
+    background-color: #cbe2ac;
+    margin-top: auto;
 }
 
 .redes{
-    width: 2%;
+    width: 20px;
     padding: 8px;
 }
 
 .social-media{
-    padding-top: 2%;
+
     display: flex;
     justify-content: center;
+    
+}
 
+.copyright{
+    text-align-last: center;
+    font-size: 15px;
 }

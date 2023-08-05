@@ -1,32 +1,41 @@
 {% include 'header.html' %}
 {% with messages=get_flashed_messages() %}
 {% if messages %}
-    {% for message in messages %}
-        {{message}}
-    {% endfor %}
+{% for message in messages %}
+{{message}}
+{% endfor %}
 {% endif %}
 {% endwith %}
-<ul>
-    <li>
-        <a href="{{ url_for('index') }}">Ver lista empleados</a>
-    </li>
-</ul>
-<form method="post" action="/store" enctype="multipart/form-data">
+<div class="create-conteiner">
+    <a href="{{ url_for('index') }}">
+        <div class="employee-list">
+            <p class="title-employee">Employee list</p>
+            <img class="employee" src="{{ url_for('static', filename='/resources/employee.gif') }}" alt="employee">
+        </div>
+    </a>
+    <form class="formulario" method="post" action="/store" enctype="multipart/form-data">
+        <div class="titles">
+            <p class="title">Employee registration</p>
+            <img class="agregar-usuario" src="{{ url_for('static', filename='/resources/agregar-usuario.png') }}"
+                alt="agregar-usuario">
+        </div>
+        <div class="inputs">
+            <label class="labels" for="txtName">Employee name's:</label>
+            <input class="in" type="text" name="txtName" id="txtName">
 
-    Employee registration
+            <label class="labels" for="txtMail">Employee mail's:</label>
+            <input class="in" type="email" name="txtMail" id="txtMail">
 
-    <label for="txtName">Name:</label>
-    <input type="text" name="txtName" id="txtName">
-    <br>
-    <label for="txtMail">Mail:</label>
-    <input type="email" name="txtMail" id="txtMail">
-    <br>
-    <label for="txtPhoto">Photo:</label>
-    <input type="file" name="txtPhoto" id="txtPhoto">
-    <br>
-    <input type="submit" value="Agregar">
-    <a href="{{url_for("index")}}">Back</a>
-</form>
-
+            <label class="labels" for="txtPhoto">Employee photo's:</label>
+            <input class="file-input" type="file" name="txtPhoto" id="txtPhoto">
+        </div>
+        <div class="botones">
+            <div class="boton">
+                <a href="{{url_for("index")}}">Back</a>
+            </div>
+            <input class="boton" type="submit" value="Register">
+        </div>
+    </form>
+</div>
 
 {% include 'footer.html' %}

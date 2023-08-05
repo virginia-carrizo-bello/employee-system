@@ -1,0 +1,92 @@
+.create-conteiner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.employee-list{
+    display: flex;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+    align-self: flex-end;
+    margin-right: 10px;
+}
+.employee-list a:hover{
+    text-decoration: underline;
+}
+
+.employee-list img{
+    width: 50px;
+    
+}
+
+.formulario {
+    background-color: #d0dfbe;
+    width: 50%;
+    margin: 10px;
+    padding: 30px;
+    font-family: 'Nunito', sans-serif;
+    border-radius: 5px;
+    border: 1px solid #65794b;
+}
+
+.titles{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    font-size: large;
+    font-weight: 1000;
+    text-align-last: center;
+}
+
+.agregar-usuario{
+    width: 30px;
+    padding: 10px;
+}
+
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+}
+
+.labels {
+    padding-bottom: 5px;
+    padding-top: 30px;
+    font-weight: 700;
+
+}
+
+.in {
+    height: 20px;
+    background-color: #d0dfbe;
+    border: none;
+    border-radius: 3px;
+    border-bottom: 1px solid #65794b;
+
+}
+.botones{
+    display: flex;
+    margin-top: 40px;
+    justify-content: space-around;
+    
+}
+.boton{
+    border: 1px solid #65794b;
+    width: 20%;
+    background-color: aliceblue;
+    display: flex;
+    justify-content: space-evenly;
+    font-family: 'Nunito', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: #323b26;
+    border-radius: 3px;
+}
